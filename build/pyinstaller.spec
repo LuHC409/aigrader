@@ -4,10 +4,10 @@ block_cipher = None
 
 
 a = Analysis(
-    ['../WordBatchAssistant/app/main.py'],
-    pathex=['..'],
+    ['WordBatchAssistant/app/main.py'],
+    pathex=['.'],
     binaries=[],
-    datas=[('../config.example.json', '.'), ('../README.txt', '.')],
+    datas=[('config.example.json', '.'), ('README.txt', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
