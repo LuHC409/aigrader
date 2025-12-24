@@ -1,0 +1,15 @@
+filename,filepath,status,elapsed_sec,input_chars,input_tokens_est,mode,output_path,error_message
+CMU_MSCS_PS_RAW.docx,/Users/haochenglu/Desktop/LIYI/CMU_MSCS_PS_RAW.docx,success,16.60,8152,2038,truncate,/Users/haochenglu/Desktop/LIYI/results/CMU_MSCS_PS_RAW.md,
+CMU_ECE_PS_Raw.docx,/Users/haochenglu/Desktop/LIYI/CMU_ECE_PS_Raw.docx,success,17.29,6585,1647,truncate,/Users/haochenglu/Desktop/LIYI/results/CMU_ECE_PS_Raw.md,
+UCSD_CS_PS_RAW.docx,/Users/haochenglu/Desktop/LIYI/UCSD_CS_PS_RAW.docx,success,8.41,9650,2413,truncate,/Users/haochenglu/Desktop/LIYI/results/UCSD_CS_PS_RAW.md,
+UIUC_POS_raw.docx,/Users/haochenglu/Desktop/LIYI/UIUC_POS_raw.docx,success,9.94,6414,1604,truncate,/Users/haochenglu/Desktop/LIYI/results/UIUC_POS_raw.md,
+filename,filepath,status,elapsed_sec,input_chars,input_tokens_est,mode,output_path,error_message
+CMU_MSCS_PS_RAW.docx,/Users/haochenglu/Desktop/LIYI/CMU_MSCS_PS_RAW.docx,success,4.00,8152,2038,truncate,/Users/haochenglu/Desktop/LIYI/results/CMU_MSCS_PS_RAW.md,
+CMU_ECE_PS_Raw.docx,/Users/haochenglu/Desktop/LIYI/CMU_ECE_PS_Raw.docx,success,5.68,6585,1647,truncate,/Users/haochenglu/Desktop/LIYI/results/CMU_ECE_PS_Raw.md,
+UCSD_CS_PS_RAW.docx,/Users/haochenglu/Desktop/LIYI/UCSD_CS_PS_RAW.docx,success,2.95,9650,2413,truncate,/Users/haochenglu/Desktop/LIYI/results/UCSD_CS_PS_RAW.md,
+UIUC_POS_raw.docx,/Users/haochenglu/Desktop/LIYI/UIUC_POS_raw.docx,success,6.25,6414,1604,truncate,/Users/haochenglu/Desktop/LIYI/results/UIUC_POS_raw.md,
+filename,filepath,status,elapsed_sec,input_chars,input_tokens_est,mode,output_path,error_message
+CMU_ECE_PS_Raw.docx,/Users/haochenglu/Desktop/LIYI/CMU_ECE_PS_Raw.docx,success,10.64,6585,1647,truncate,/Users/haochenglu/Desktop/LIYI/results/CMU_ECE_PS_Raw.md,
+CMU_MSCS_PS_RAW.docx,/Users/haochenglu/Desktop/LIYI/CMU_MSCS_PS_RAW.docx,success,10.73,8152,2038,truncate,/Users/haochenglu/Desktop/LIYI/results/CMU_MSCS_PS_RAW.md,
+UCSD_CS_PS_RAW.docx,/Users/haochenglu/Desktop/LIYI/UCSD_CS_PS_RAW.docx,success,7.90,9650,2413,truncate,/Users/haochenglu/Desktop/LIYI/results/UCSD_CS_PS_RAW.md,
+UIUC_POS_raw.docx,/Users/haochenglu/Desktop/LIYI/UIUC_POS_raw.docx,success,18.31,6414,1604,truncate,/Users/haochenglu/Desktop/LIYI/results/UIUC_POS_raw.md,

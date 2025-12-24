@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+.Python
+build/
+dist/
+*.spec
+*.log
+*.zip
+run.log

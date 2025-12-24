@@ -1,0 +1,13 @@
+{
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "model": "openai/gpt-oss-20b:free",
+  "api_key": "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",
+  "temperature": 0.0,
+  "max_output_tokens": 8192,
+  "timeout_sec": 120,
+  "concurrency": 2,
+  "include_tables": true,
+  "long_doc_mode": "truncate",
+  "max_input_tokens": 20000,
+  "chunk_target_tokens": 6000
+}

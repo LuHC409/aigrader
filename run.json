@@ -1,0 +1,22 @@
+{
+  "start_time": 1765691084.010096,
+  "total": 4,
+  "success": 4,
+  "failed": 0,
+  "skipped": 0,
+  "cancelled": 0,
+  "end_time": 1765691113.0683599,
+  "duration_sec": 29.058242797851562,
+  "config": {
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "model": "openai/gpt-oss-20b:free",
+    "temperature": 1.3000000000000003,
+    "max_output_tokens": 8000,
+    "timeout_sec": 123,
+    "concurrency": 2,
+    "include_tables": true,
+    "long_doc_mode": "truncate",
+    "max_input_tokens": 16000,
+    "chunk_target_tokens": 6000
+  }
+}
