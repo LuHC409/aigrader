@@ -1,13 +1,21 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+from pathlib import Path
+
 block_cipher = None
+
+ROOT = Path(__file__).resolve().parent.parent
+ENTRY_SCRIPT = ROOT / "WordBatchAssistant" / "app" / "main.py"
 
 
 a = Analysis(
-    ['WordBatchAssistant/app/main.py'],
-    pathex=['.'],
+    [str(ENTRY_SCRIPT)],
+    pathex=[str(ROOT)],
     binaries=[],
-    datas=[('config.example.json', '.'), ('README.txt', '.')],
+    datas=[
+        (str(ROOT / 'config.example.json'), '.'),
+        (str(ROOT / 'README.txt'), '.'),
+    ],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
