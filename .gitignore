@@ -6,6 +6,7 @@ __pycache__/
 .venv
 .Python
 build/
+!build/pyinstaller.spec
 dist/
 *.spec
 *.log
