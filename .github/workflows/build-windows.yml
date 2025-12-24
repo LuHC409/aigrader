@@ -20,8 +20,9 @@ jobs:
           pip install -r requirements.txt
           pip install -r requirements-build.txt
       - name: Build with PyInstaller
+        shell: pwsh
         run: |
-          pyinstaller build/pyinstaller.spec
+          pyinstaller "$env:GITHUB_WORKSPACE\build\pyinstaller.spec"
       - name: Package artifact
         run: |
           Copy-Item README.txt dist/WordBatchAssistant/README.txt
