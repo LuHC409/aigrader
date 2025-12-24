@@ -4,10 +4,9 @@ from pathlib import Path
 
 block_cipher = None
 
-# SPECPATH: directory part of SPEC (where the .spec lives), provided by PyInstaller
-# Your spec is at build/pyinstaller.spec, so SPECPATH == <repo>/build
+# SPECPATH is provided by PyInstaller; your spec is at build/pyinstaller.spec
+# so SPECPATH == <repo>/build
 ROOT = Path(SPECPATH).resolve().parent
-
 ENTRY_SCRIPT = ROOT / "WordBatchAssistant" / "app" / "main.py"
 
 a = Analysis(
@@ -34,10 +33,8 @@ pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 exe = EXE(
     pyz,
     a.scripts,
-    a.binaries,
-    a.zipfiles,
-    a.datas,
     [],
+    exclude_binaries=True,   # IMPORTANT: make onedir output via COLLECT
     name="WordBatchAssistant",
     debug=False,
     bootloader_ignore_signals=False,
@@ -51,4 +48,15 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+)
+
+coll = COLLECT(
+    exe,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    name="WordBatchAssistant",
 )
