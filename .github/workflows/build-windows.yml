@@ -22,12 +22,21 @@ jobs:
       - name: Build with PyInstaller
         shell: pwsh
         run: |
-          pyinstaller "$env:GITHUB_WORKSPACE\build\pyinstaller.spec"
+          pyinstaller --noconfirm --clean `
+            --workpath "$env:GITHUB_WORKSPACE\pyi-build" `
+            --distpath "$env:GITHUB_WORKSPACE\dist" `
+            "$env:GITHUB_WORKSPACE\build\pyinstaller.spec"
       - name: Package artifact
+        shell: pwsh
         run: |
-          Copy-Item README.txt dist/WordBatchAssistant/README.txt
-          Copy-Item config.example.json dist/WordBatchAssistant/config.example.json
-          Compress-Archive -Path dist/WordBatchAssistant -DestinationPath WordBatchAssistant.zip
+          $outDir = Join-Path $env:GITHUB_WORKSPACE "dist\WordBatchAssistant"
+          if (!(Test-Path $outDir)) {
+            throw "Output directory not found: $outDir"
+          }
+          Copy-Item README.txt (Join-Path $outDir "README.txt") -Force
+          Copy-Item config.example.json (Join-Path $outDir "config.example.json") -Force
+          if (Test-Path "WordBatchAssistant.zip") { Remove-Item "WordBatchAssistant.zip" -Force }
+          Compress-Archive -Path $outDir -DestinationPath WordBatchAssistant.zip -Force
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
