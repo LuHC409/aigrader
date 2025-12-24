@@ -1,21 +1,22 @@
 # -*- mode: python ; coding: utf-8 -*-
 
 from pathlib import Path
-import sys
 
 block_cipher = None
 
-ROOT = Path(__file__).parent.parent.resolve()
-ENTRY_SCRIPT = ROOT / "WordBatchAssistant" / "app" / "main.py"
+# SPECPATH: directory part of SPEC (where the .spec lives), provided by PyInstaller
+# Your spec is at build/pyinstaller.spec, so SPECPATH == <repo>/build
+ROOT = Path(SPECPATH).resolve().parent
 
+ENTRY_SCRIPT = ROOT / "WordBatchAssistant" / "app" / "main.py"
 
 a = Analysis(
     [str(ENTRY_SCRIPT)],
-pathex=[str(ROOT)],
+    pathex=[str(ROOT)],
     binaries=[],
     datas=[
-        (str(ROOT / 'config.example.json'), '.'),
-        (str(ROOT / 'README.txt'), '.'),
+        (str(ROOT / "config.example.json"), "."),
+        (str(ROOT / "README.txt"), "."),
     ],
     hiddenimports=[],
     hookspath=[],
@@ -27,6 +28,7 @@ pathex=[str(ROOT)],
     cipher=block_cipher,
     noarchive=False,
 )
+
 pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 
 exe = EXE(
@@ -36,7 +38,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='WordBatchAssistant',
+    name="WordBatchAssistant",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
